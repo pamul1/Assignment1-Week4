@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="titleID">Employee</h1>
+
+    <form onsubmit="createEmployee()">
+
+        <select id="employeeType" onchange="hideForm()">
+            <option value="">Select</option>
+            <option value="fullTime">Employee Full-Time </option>
+            <option value="partTime">Employee Part-Time</option>
+        </select>
+
+        <label>Name</label>
+        <input id="inputName" type="text">
+
+        <label>Age</label>
+        <input id="inputAge" type="text">
+
+        <div id="salaryperYear" style="display: none;">
+            <label id="labelSalaryperYear">Salary per Year</label>
+            <input id="inputSalaryperYear" type="number">
+        </div>
+
+        <div id="wageperHourly" style="display: none;">
+            <label id="labelWageperHour">Wage per Hour</label>
+            <input id="inputWageperHour" type="number">
+        </div>
+
+        <button>Send</button>
+    </form>
+
+    <form onsubmit="addFulltimeInfo()" id="fullTimeForm" style="display: none;">
+        <h1>Full Time Form</h1>
+        <input placeholder="Vacations" id="inputVacationDays" type="number">
+        <button>Add Vacations</button>
+    </form>
+
+    <form onsubmit="addParttimeInfo()" style="display: none;" id="partTimeForm">
+        <h1>Partime Employee</h1>
+        <input id="inputWorkedHours" placeholder="Worked Hours">
+        <button>Send</button>
+    </form>
+
+    <p id="outputData"></p>
+
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
