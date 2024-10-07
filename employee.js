@@ -14,14 +14,14 @@ export class Employee{
 export class employeeFullTime extends Employee{
 
 
-    constructor(name, age, yearlySalary){
+    constructor(name, age, SalaryperYear){
         super(name, age)
-        this.yearlySalary= yearlySalary
+        this.SalaryperYear= SalaryperYear
         this.vacationDays= 0
         
     }
     calculateMonthlyPay(){
-         this.salary = (this.yearlySalary / 12)
+         this.salary = (this.SalaryperYear / 12)
          return this.salary
     }
 
@@ -34,12 +34,12 @@ export class employeeFullTime extends Employee{
 
 export class employeePartTime extends Employee{
 
-    constructor(name, age, hourlyWage){
+    constructor(name, age, wageperHour){
         super(name, age)
-        this.hourlyWage= hourlyWage
+        this.wageperHour= wageperHour
     }
     workHours(hours){
-        this.salary= (this.hourlyWage * hours);
+        this.salary= (this.wageperHour * hours);
         return this.salary
     }
 }
