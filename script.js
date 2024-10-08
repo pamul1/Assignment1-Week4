@@ -62,7 +62,7 @@ function infoFulltime() {
     let vacationDays = parseFloat(inputVacationDays.value)
     let getVacationsInfo=employeeForm.accumulateVacationDays(vacationDays)
 
-    p.textContent = `Your estimated monthly pay is ${globalObject.calculateMonthlyPay()} and you have ${getVacationsInfo} vacation days.`
+    p.textContent = `Your estimated monthly pay is ${employeeForm.calculateMonthlyPay()} and you have ${getVacationsInfo} vacation days.`
 
 }
 
